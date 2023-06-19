@@ -19,5 +19,11 @@ pipeline {
       }
     }
 
+    stage('') {
+      steps {
+        sh 'python manage.py collectstatic --noinput'
+      }
+    }
+
   }
 }
