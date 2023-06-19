@@ -19,5 +19,11 @@ pipeline {
       }
     }
 
+    stage('Run Tests') {
+      steps {
+        sh 'python manage.py test'
+      }
+    }
+
   }
 }
