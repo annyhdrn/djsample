@@ -19,9 +19,10 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('Deploy') {
       steps {
-        sh 'python manage.py collectstatic --noinput'
+        sh '''python manage.py migrate
+python manage.py runserver'''
       }
     }
 
