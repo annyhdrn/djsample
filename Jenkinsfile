@@ -9,13 +9,15 @@ pipeline {
 
     stage('log') {
       steps {
-        sh 'ls -la'
+        sh '''ls -la
+'''
       }
     }
 
     stage('Install Dependencies') {
       steps {
-        sh 'pip install -r requirements.txt'
+        sh '''pip install -r requirements.txt
+sh deploy/setup.sh'''
       }
     }
 
